@@ -3026,7 +3026,7 @@ input, select, textarea {
 				left: auto;
 				padding: 6em 4em;
 				position: relative;
-				text-align: center;
+				text-align: left;
 				top: auto;
 				width: 100%;
 				display: block;
