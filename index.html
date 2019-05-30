@@ -74,52 +74,130 @@
 						</p>
 					</section>
 				<!-- Four -->
-				<!--
 					<section id="four">
 						<header class="major">
-							<h2></h2>
+							<h2>My Achievements</h2>
 						</header>
-						<p>
+						<style>
+							#slider {
+							    opacity:1;
+							    transition: opacity 1s; 
+							}
+							
+							#slider.fadeOut {
+							    opacity:0;
+							}
+						</style>
+						<div>
+							<img id="slider" src="images/Certificates/1.jpg" width="800" height="500"  />
+						</div>
+
+						<script>
+		    					var imgArray = [
+								'images/Certificates/1.jpg',
+			            				'images/Certificates/2.jpg',
+			            				'images/Certificates/3.jpg',
+								'images/Certificates/4.jpg',
+								'images/Certificates/5.jpg',
+								'images/Certificates/6.jpg',
+								'images/Certificates/7.jpg',
+								'images/Certificates/8.jpg',
+								'images/Certificates/9.jpg',
+								'images/Certificates/10.jpg',
+								'images/Certificates/11.jpg',
+								'images/Certificates/12.jpg',
+								'images/Certificates/13.jpg',
+								'images/Certificates/14.jpg',
+								'images/Certificates/15.jpg',
+								'images/Certificates/16.jpg',
+								'images/Certificates/17.jpg',
+								'images/Certificates/18.jpg',
+								'images/Certificates/19.jpg',
+								'images/Certificates/20.jpg',
+								'images/Certificates/21.jpg',
+								'images/Certificates/22.jpg',
+								'images/Certificates/23.jpg',
+								'images/Certificates/24.jpg',
+								'images/Certificates/25.jpg',
+								'images/Certificates/26.jpg',
+								'images/Certificates/27.jpg',
+								'images/Certificates/28.jpg',
+								'images/Certificates/29.jpg',
+								'images/Certificates/30.jpg',
+								'images/Certificates/31.jpg',
+								'images/Certificates/32.jpg'],
+	        						curIndex = 0;
+        							imgDuration = 5000;
+
+    							function slideShow() {
+							    document.getElementById('slider').className += "fadeOut";
+							    setTimeout(function() {
+								document.getElementById('slider').src = imgArray[curIndex];
+								document.getElementById('slider').className = "";
+							    },1000);
+							    curIndex++;
+							    if (curIndex == imgArray.length) { curIndex = 0; }
+							    setTimeout(slideShow, imgDuration);
+							}
+							slideShow();
+						</script>
+
+						<!-- 
+						<div id="carousel">
+							<div class="inactive">
+								<img width="946" height="473" alt="" src="images/Certificates/1.jpg" >
+							</div>
+							<div class="inactive">
+								<img width="946" height="473" alt="" src="images/Certificates/2.jpg" >
+							</div>
+							<div class="active">
+								<img width="946" height="473" alt="" src="images/Certificates/3.jpg" >
+							</div>
+							<div class="inactive">
+								<img width="946" height="473" alt="" src="images/Certificates/4.jpg" >
+							</div>
+						</div>
 						
-						</p>
+						<script>
+							onload = function() {
+							
+								var e, i = 0;
+								e = document.getElementById('carousel').getElementsByTagName ('div');
+								while (e[i++]) {
+									e.onmouseover = function () {
+										clearTimeout(t);
+									}
+							
+									e.onmouseout = function () {
+										t=setTimeout("timedCount()",timeOut);
+									}
+								}
+							}
+							
+							c=0;
+							timeOut = 5000;
+							var t;
+							t=setTimeout("timedCount()",timeOut);
+							
+							function timedCount() {
+								var getImage = document.getElementById('carousel').getElementsByTagName('div');
+								img = getImage.length-1;
+								for (var a=0; a<getImage.length; a++) {
+									if (getImage[a].className.indexOf("active") == 0) {
+										getImage[a].className = 'inactive';
+										c = a;
+									}
+								}
+								c++;
+								if (c>img) {c=0;}
+								getImage[c].className = 'active';
+								t=setTimeout("timedCount()",timeOut);
+							}
+						</script>
+						-->
 					</section>
 						
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					-->
+					
 					
 				
 				<!-- Five -->
