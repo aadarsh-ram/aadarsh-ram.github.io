@@ -135,7 +135,7 @@
 							    setTimeout(function() {
 								document.getElementById('slider').src = imgArray[curIndex];
 								document.getElementById('slider').className = "";
-							    },1000);
+							    },0);
 							    curIndex++;
 							    if (curIndex == imgArray.length) { curIndex = 0; }
 							    setTimeout(slideShow, imgDuration);
